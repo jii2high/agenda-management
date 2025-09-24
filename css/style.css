@@ -1,0 +1,270 @@
+/* Custom CSS untuk Agenda Management System */
+
+/* Global Styles */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #475569 #1e293b;
+}
+
+*::-webkit-scrollbar {
+    width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #1e293b;
+    border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: #475569;
+    border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+}
+
+/* Loading Animation */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+.fade-out {
+    animation: fadeOut 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(-10px); }
+}
+
+/* Glassmorphism Effect */
+.glass {
+    background: rgba(51, 65, 85, 0.5);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(71, 85, 105, 0.3);
+}
+
+/* Hover Effects */
+.hover-lift {
+    transition: all 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Custom Button Styles */
+.btn-primary {
+    @apply bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200;
+}
+
+.btn-secondary {
+    @apply bg-gray-600 hover:bg-gray-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200;
+}
+
+.btn-success {
+    @apply bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded transition-colors duration-200;
+}
+
+.btn-danger {
+    @apply bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded transition-colors duration-200;
+}
+
+.btn-disabled {
+    @apply bg-gray-800 text-gray-500 cursor-not-allowed;
+}
+
+/* Form Styles */
+.form-input {
+    @apply w-full p-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:border-blue-400 focus:outline-none transition-colors duration-200;
+}
+
+.form-label {
+    @apply block text-gray-300 text-sm mb-2 font-medium;
+}
+
+/* Card Styles */
+.card {
+    @apply bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl shadow-xl;
+}
+
+.card-hover {
+    @apply hover:bg-slate-700/50 transition-all duration-200 cursor-pointer;
+}
+
+/* Status Badges */
+.badge {
+    @apply px-3 py-1 rounded-full text-sm font-medium;
+}
+
+.badge-pending {
+    @apply bg-yellow-600 text-white;
+}
+
+.badge-approved {
+    @apply bg-green-600 text-white;
+}
+
+.badge-rejected {
+    @apply bg-red-600 text-white;
+}
+
+.badge-today {
+    @apply bg-blue-600 text-white;
+}
+
+/* Notification Styles */
+.notification {
+    @apply px-4 py-3 rounded-lg shadow-lg border transition-all duration-300 fade-in;
+}
+
+.notification-success {
+    @apply bg-green-600 border-green-500 text-white;
+}
+
+.notification-error {
+    @apply bg-red-600 border-red-500 text-white;
+}
+
+.notification-info {
+    @apply bg-blue-600 border-blue-500 text-white;
+}
+
+.notification-warning {
+    @apply bg-yellow-600 border-yellow-500 text-white;
+}
+
+/* Modal Animations */
+.modal-enter {
+    animation: modalEnter 0.3s ease-out;
+}
+
+.modal-leave {
+    animation: modalLeave 0.3s ease-in;
+}
+
+@keyframes modalEnter {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes modalLeave {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .mobile-stack {
+        @apply flex-col space-y-4;
+    }
+    
+    .mobile-full {
+        @apply w-full;
+    }
+    
+    .mobile-text-sm {
+        @apply text-sm;
+    }
+    
+    .mobile-p-4 {
+        @apply p-4;
+    }
+}
+
+/* Custom Scrollbar for specific elements */
+.custom-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: #3b82f6 #1e293b;
+}
+
+.custom-scroll::-webkit-scrollbar {
+    width: 6px;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+    background: #1e293b;
+    border-radius: 3px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+    background: #3b82f6;
+    border-radius: 3px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+    background: #2563eb;
+}
+
+/* Loading States */
+.skeleton {
+    @apply animate-pulse bg-slate-700/50 rounded;
+}
+
+.spinner {
+    @apply animate-spin rounded-full border-2 border-blue-400 border-t-transparent;
+}
+
+/* Focus States for Accessibility */
+.focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50;
+}
+
+/* Hover effects for interactive elements */
+.interactive {
+    @apply transition-all duration-200 hover:scale-105 active:scale-95;
+}
+
+/* Text utilities */
+.text-gradient {
+    background: linear-gradient(135deg, #3b82f6, #06b6d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Layout utilities */
+.container-custom {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Animation delays for staggered effects */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+
+/* Print styles */
+@media print {
+    body {
+        @apply bg-white text-black;
+    }
+    
+    .no-print {
+        display: none !important;
+    }
+    
+    .print-break {
+        page-break-before: always;
+    }
+}
